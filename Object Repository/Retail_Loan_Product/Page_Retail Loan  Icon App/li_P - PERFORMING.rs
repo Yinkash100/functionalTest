@@ -7,7 +7,7 @@
    <selectorCollection>
       <entry>
          <key>XPATH</key>
-         <value>//div[@id='f19d2fa6-b08a-435f-f862-78ea5f7aef0d']/ul/li[2]</value>
+         <value>(.//*[normalize-space(text()) and normalize-space(.)='NP - NON PERFORMING'])[1]/following::li[1]</value>
       </entry>
    </selectorCollection>
    <selectorMethod>XPATH</selectorMethod>
