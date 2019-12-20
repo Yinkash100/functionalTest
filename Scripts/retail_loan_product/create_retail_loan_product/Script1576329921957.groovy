@@ -148,11 +148,11 @@ WebUI.click(findTestObject('Object Repository/Retail_Loan_Product/Page_Retail Lo
 WebUI.setText(findTestObject('Retail_Loan_Product/Page_Retail Loan  Icon App/input_Max Repayment Count_ant-input ant-input'), 
     '10')
 
-WebUI.click(findTestObject('Retail_Loan_Product/Page_Retail Loan  Icon App/div_ (9)'))
+not_run: WebUI.click(findTestObject('Retail_Loan_Product/Page_Retail Loan  Icon App/div_ (9)'))
 
-WebUI.delay(12)
+not_run: WebUI.delay(12)
 
-WebUI.click(findTestObject('Retail_Loan_Product/Page_Retail Loan  Icon App/li_45870 - SWIFT RECOVERY'))
+not_run: WebUI.click(findTestObject('Retail_Loan_Product/Page_Retail Loan  Icon App/li_45960 - CASHEX SETTLEMENT'))
 
 WebUI.click(findTestObject('Retail_Loan_Product/Page_Retail Loan  Icon App/button_Multiple Disbursement Allowed_ant-switch ant-switch-checked'), 
     FailureHandling.STOP_ON_FAILURE)
@@ -182,13 +182,13 @@ WebUI.sendKeys(findTestObject('Retail_Loan_Product/Page_Retail Loan  Icon App/in
 WebUI.sendKeys(findTestObject('Retail_Loan_Product/Page_Retail Loan  Icon App/input_Minimum Loan Period (YMD)_ant-input (3)'), 
     '30')
 
-not_run: WebUI.setText(findTestObject('Retail_Loan_Product/Page_Retail Loan  Icon App/input_Maximum Loan Period (YMD)_ant-input'), 
+WebUI.setText(findTestObject('Retail_Loan_Product/Page_Retail Loan  Icon App/input_Maximum Loan Period (YMD)_ant-input'), 
     '30')
 
-not_run: WebUI.setText(findTestObject('Retail_Loan_Product/Page_Retail Loan  Icon App/input_Maximum Loan Period (YMD)_ant-input (1)'), 
+WebUI.setText(findTestObject('Retail_Loan_Product/Page_Retail Loan  Icon App/input_Maximum Loan Period (YMD)_ant-input (1)'), 
     '12')
 
-not_run: WebUI.setText(findTestObject('Retail_Loan_Product/Page_Retail Loan  Icon App/input_Maximum Loan Period (YMD)_ant-input (2)'), 
+WebUI.setText(findTestObject('Retail_Loan_Product/Page_Retail Loan  Icon App/input_Maximum Loan Period (YMD)_ant-input (2)'), 
     '5')
 
 WebUI.click(findTestObject('Retail_Loan_Product/Page_Retail Loan  Icon App/div_ (10)'))
@@ -211,7 +211,7 @@ WebUI.click(findTestObject('Object Repository/Retail_Loan_Product/Page_Retail Lo
 
 WebUI.click(findTestObject('Retail_Loan_Product/Page_Retail Loan  Icon App/div_ (14)'))
 
-WebUI.click(findTestObject('Object Repository/Retail_Loan_Product/Page_Retail Loan  Icon App/li_DEFAULT - DEFAULT'))
+WebUI.click(findTestObject('Retail_Loan_Product/Page_Retail Loan  Icon App/li_DEFAULT - DEFAULT (2)'))
 
 WebUI.click(findTestObject('Retail_Loan_Product/Page_Retail Loan  Icon App/div_ (15)'))
 
@@ -266,7 +266,7 @@ WebUI.setText(findTestObject('Object Repository/Retail_Loan_Product/Page_Retail 
 
 WebUI.click(findTestObject('Retail_Loan_Product/Page_Retail Loan  Icon App/div_ (16)'))
 
-WebUI.click(findTestObject('Object Repository/Retail_Loan_Product/Page_Retail Loan  Icon App/li_MONTHLY - Monthly'))
+WebUI.click(findTestObject('Retail_Loan_Product/Page_Retail Loan  Icon App/li_MONTHLY - Monthly (1)'))
 
 WebUI.click(findTestObject('Retail_Loan_Product/Page_Retail Loan  Icon App/div_ (15)'))
 
@@ -292,14 +292,14 @@ WebUI.click(findTestObject('Retail_Loan_Product/Page_Retail Loan  Icon App/div_ 
 
 WebUI.click(findTestObject('Object Repository/Retail_Loan_Product/Page_Retail Loan  Icon App/li_Good - GOOD'))
 
-WebUI.sendKeys(findTestObject('Retail_Loan_Product/Page_Retail Loan  Icon App/input_Penal Interest Suspense Spacer_ant-input'), 
+not_run: WebUI.sendKeys(findTestObject('Retail_Loan_Product/Page_Retail Loan  Icon App/input_Penal Interest Suspense Spacer_ant-input'), 
     Keys.chord(Keys.ENTER))
 
-WebUI.setText(findTestObject('Retail_Loan_Product/Page_Retail Loan  Icon App/input_Code_ant-input (9)'), 'PENAL')
+not_run: WebUI.setText(findTestObject('Retail_Loan_Product/Page_Retail Loan  Icon App/input_Code_ant-input (10)'), 'PENAL')
 
-WebUI.click(findTestObject('Retail_Loan_Product/Page_Retail Loan  Icon App/button_Search (10)'))
+not_run: WebUI.click(findTestObject('Retail_Loan_Product/Page_Retail Loan  Icon App/button_Search (10)'))
 
-WebUI.click(findTestObject('Retail_Loan_Product/Page_Retail Loan  Icon App/button_Select (5)'))
+not_run: WebUI.click(findTestObject('Retail_Loan_Product/Page_Retail Loan  Icon App/button_Select (5)'))
 
 WebUI.click(findTestObject('Retail_Loan_Product/Page_Retail Loan  Icon App/button_Apply Interest_ant-switch'))
 
@@ -343,35 +343,35 @@ WebUI.click(findTestObject('Retail_Loan_Product/Page_Retail Loan  Icon App/butto
 
 WebUI.click(findTestObject('Object Repository/Retail_Loan_Product/Page_Retail Loan  Icon App/button_Next'))
 
-WebUI.click(findTestObject('Object Repository/Retail_Loan_Product/Page_Retail Loan  Icon App/div_Flow Types'))
+not_run: WebUI.click(findTestObject('Object Repository/Retail_Loan_Product/Page_Retail Loan  Icon App/div_Flow Types'))
 
-WebUI.click(findTestObject('Object Repository/Retail_Loan_Product/Page_Retail Loan  Icon App/li_PENAL_INTEREST_DEMAND - Penal interest'))
+not_run: WebUI.click(findTestObject('Object Repository/Retail_Loan_Product/Page_Retail Loan  Icon App/li_PENAL_INTEREST_DEMAND - Penal interest'))
 
-WebUI.click(findTestObject('Object Repository/Retail_Loan_Product/Page_Retail Loan  Icon App/div_Flow Code'))
+not_run: WebUI.click(findTestObject('Object Repository/Retail_Loan_Product/Page_Retail Loan  Icon App/div_Flow Code'))
 
-WebUI.click(findTestObject('Object Repository/Retail_Loan_Product/Page_Retail Loan  Icon App/li_DEFAULT - DEFAULT'))
+not_run: WebUI.click(findTestObject('Retail_Loan_Product/Page_Retail Loan  Icon App/li_DEFAULT - DEFAULT'))
 
-WebUI.click(findTestObject('Object Repository/Retail_Loan_Product/Page_Retail Loan  Icon App/button_Add Flow'))
+not_run: WebUI.click(findTestObject('Object Repository/Retail_Loan_Product/Page_Retail Loan  Icon App/button_Add Flow'))
 
-WebUI.click(findTestObject('Object Repository/Retail_Loan_Product/Page_Retail Loan  Icon App/div_Flow Types'))
+not_run: WebUI.click(findTestObject('Object Repository/Retail_Loan_Product/Page_Retail Loan  Icon App/div_Flow Types'))
 
-WebUI.click(findTestObject('Object Repository/Retail_Loan_Product/Page_Retail Loan  Icon App/li_PENAL_INTEREST_DEMAND - Penal interest'))
+not_run: WebUI.click(findTestObject('Object Repository/Retail_Loan_Product/Page_Retail Loan  Icon App/li_PENAL_INTEREST_DEMAND - Penal interest'))
 
-WebUI.click(findTestObject('Object Repository/Retail_Loan_Product/Page_Retail Loan  Icon App/div_Flow Code'))
+not_run: WebUI.click(findTestObject('Object Repository/Retail_Loan_Product/Page_Retail Loan  Icon App/div_Flow Code'))
 
-WebUI.click(findTestObject('Object Repository/Retail_Loan_Product/Page_Retail Loan  Icon App/li_FLW001 - LOAN FLOW'))
+not_run: WebUI.click(findTestObject('Retail_Loan_Product/Page_Retail Loan  Icon App/li_FLW001 - LOAN FLOW'))
 
-WebUI.click(findTestObject('Object Repository/Retail_Loan_Product/Page_Retail Loan  Icon App/button_Add Flow'))
+not_run: WebUI.click(findTestObject('Object Repository/Retail_Loan_Product/Page_Retail Loan  Icon App/button_Add Flow'))
 
-WebUI.click(findTestObject('Object Repository/Retail_Loan_Product/Page_Retail Loan  Icon App/div_Flow Types'))
+not_run: WebUI.click(findTestObject('Object Repository/Retail_Loan_Product/Page_Retail Loan  Icon App/div_Flow Types'))
 
-WebUI.click(findTestObject('Object Repository/Retail_Loan_Product/Page_Retail Loan  Icon App/li_OVERDUE_PRINCIPAL_DEMAND - Overdue principal'))
+not_run: WebUI.click(findTestObject('Object Repository/Retail_Loan_Product/Page_Retail Loan  Icon App/li_OVERDUE_PRINCIPAL_DEMAND - Overdue principal'))
 
-WebUI.click(findTestObject('Object Repository/Retail_Loan_Product/Page_Retail Loan  Icon App/div_Flow Code'))
+not_run: WebUI.click(findTestObject('Object Repository/Retail_Loan_Product/Page_Retail Loan  Icon App/div_Flow Code'))
 
-WebUI.click(findTestObject('Object Repository/Retail_Loan_Product/Page_Retail Loan  Icon App/li_FLW001 - LOAN FLOW'))
+not_run: WebUI.click(findTestObject('Retail_Loan_Product/Page_Retail Loan  Icon App/li_FLW001 - LOAN FLOW'))
 
-WebUI.click(findTestObject('Object Repository/Retail_Loan_Product/Page_Retail Loan  Icon App/button_Add Flow'))
+not_run: WebUI.click(findTestObject('Object Repository/Retail_Loan_Product/Page_Retail Loan  Icon App/button_Add Flow'))
 
 WebUI.click(findTestObject('Object Repository/Retail_Loan_Product/Page_Retail Loan  Icon App/button_Next'))
 
@@ -379,7 +379,7 @@ WebUI.click(findTestObject('Retail_Loan_Product/Page_Retail Loan  Icon App/div_ 
 
 WebUI.delay(3)
 
-WebUI.click(findTestObject('Retail_Loan_Product/Page_Retail Loan  Icon App/li_IC3 - VALUE DATED NOTICE (1)'))
+WebUI.click(findTestObject('Retail_Loan_Product/Page_Retail Loan  Icon App/li_IC3 - VALUE DATED NOTICE'))
 
 WebUI.click(findTestObject('Retail_Loan_Product/Page_Retail Loan  Icon App/div_ (21)'))
 
@@ -389,5 +389,5 @@ WebUI.click(findTestObject('Retail_Loan_Product/Page_Retail Loan  Icon App/li_TP
 
 WebUI.click(findTestObject('Object Repository/Retail_Loan_Product/Page_Retail Loan  Icon App/button_Create Loan Product'))
 
-WebUI.closeBrowser()
+not_run: WebUI.closeBrowser()
 
