@@ -1,12 +1,13 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <WebElementEntity>
    <description></description>
-   <name>svg_1</name>
+   <name>svg (1)</name>
    <tag></tag>
-   <elementGuidId>8b972baf-af78-4472-8bd1-dc1f6314abdb</elementGuidId>
+   <elementGuidId>13c48336-76bb-4e03-948a-0cc9c2b4ec58</elementGuidId>
    <selectorCollection>
       <entry>
          <key>XPATH</key>
+         <value></value>
       </entry>
    </selectorCollection>
    <selectorMethod>XPATH</selectorMethod>
@@ -30,7 +31,7 @@
       <matchCondition>equals</matchCondition>
       <name>data-icon</name>
       <type>Main</type>
-      <value>close</value>
+      <value>fullscreen-exit</value>
    </webElementProperties>
    <webElementProperties>
       <isSelected>false</isSelected>
@@ -72,6 +73,6 @@
       <matchCondition>equals</matchCondition>
       <name>xpath</name>
       <type>Main</type>
-      <value>/html[1]/body[1]/div[5]/div[@class=&quot;ant-drawer ant-drawer-right ant-drawer-open fixedBottomDrawer&quot;]/div[@class=&quot;ant-drawer-content-wrapper&quot;]/div[@class=&quot;ant-drawer-content&quot;]/div[@class=&quot;ant-drawer-wrapper-body&quot;]/div[@class=&quot;ant-drawer-body&quot;]/form[@class=&quot;term_deposit ant-form ant-form-horizontal&quot;]/div[@class=&quot;ant-tabs ant-tabs-top ant-tabs-line&quot;]/div[@class=&quot;ant-tabs-content ant-tabs-content-animated ant-tabs-top-content&quot;]/div[@class=&quot;ant-tabs-tabpane ant-tabs-tabpane-active&quot;]/div[3]/div[@class=&quot;multirecordTable ant-table-wrapper&quot;]/div[@class=&quot;ant-spin-nested-loading&quot;]/div[@class=&quot;ant-spin-container&quot;]/div[@class=&quot;ant-table ant-table-scroll-position-left ant-table-default ant-table-bordered ant-table-empty&quot;]/div[@class=&quot;ant-table-title&quot;]/div[2]/form[@class=&quot;ant-form ant-form-horizontal&quot;]/div[1]/div[@class=&quot;ant-row-flex ant-row-flex-bottom&quot;]/div[@class=&quot;ant-col-8&quot;]/div[@class=&quot;ant-row ant-form-item&quot;]/div[@class=&quot;ant-form-item-control-wrapper&quot;]/div[@class=&quot;ant-form-item-control&quot;]/span[@class=&quot;ant-form-item-children&quot;]/button[@class=&quot;ant-switch&quot;]/span[@class=&quot;ant-switch-inner&quot;]/i[@class=&quot;anticon anticon-close&quot;]/svg[1]</value>
+      <value>id(&quot;__layout&quot;)/div[@class=&quot;default wrapper wrapper--collapse wrapper--collapse-inner-menu&quot;]/aside[@class=&quot;aside&quot;]/div[@class=&quot;aside__outter-menu&quot;]/div[@class=&quot;aside__header&quot;]/a[@class=&quot;aside__toggler&quot;]/i[@class=&quot;anticon anticon-fullscreen-exit&quot;]/svg[1]</value>
    </webElementProperties>
 </WebElementEntity>

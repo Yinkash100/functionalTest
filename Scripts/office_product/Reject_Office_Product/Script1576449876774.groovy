@@ -31,6 +31,8 @@ WebUI.click(findTestObject('office_products/Page_icon-app/button_Search Request'
 
 WebUI.delay(3)
 
+WebUI.maximizeWindow()
+
 WebUI.click(findTestObject('office_products/Page_icon-app/button_insert_table__btn ant-btn ant-btn-primary'))
 
 WebUI.click(findTestObject('office_products/Page_icon-app/button_Reject'))
@@ -38,6 +40,8 @@ WebUI.click(findTestObject('office_products/Page_icon-app/button_Reject'))
 WebUI.setText(findTestObject('office_products/Page_icon-app/textarea_Reason_ant-input'), 'THERE IS A REASON FOR EVERYTHING')
 
 WebUI.click(findTestObject('office_products/Page_icon-app/button_Reject (1)'))
+
+WebUI.verifyTextPresent('Success!', false, FailureHandling.STOP_ON_FAILURE)
 
 WebUI.closeBrowser()
 

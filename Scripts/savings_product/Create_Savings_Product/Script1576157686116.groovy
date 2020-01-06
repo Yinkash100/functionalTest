@@ -84,9 +84,6 @@ WebUI.click(findTestObject('Object Repository/Savings_Product/Page_icon-app/butt
 
 WebUI.click(findTestObject('Savings_Product/Page_icon-app/div_ (3)'))
 
-WebUI.setText(findTestObject('Object Repository/Savings_Product/Page_icon-app/input_Account Number Generation Code_ant-se_64f3b1'), 
-    'v')
-
 WebUI.click(findTestObject('Object Repository/Savings_Product/Page_icon-app/li_TDGOV'))
 
 WebUI.setText(findTestObject('Object Repository/Savings_Product/Page_icon-app/input_Minimum Age_ant-input ant-input'), '16')
@@ -251,5 +248,7 @@ WebUI.click(findTestObject('Savings_Product/Page_icon-app/button_CREATE SAVINGS 
 
 WebUI.click(findTestObject('Savings_Product/Page_icon-app/button_Yes (3)'))
 
-WebUI.closeBrowser()
+WebUI.verifyTextPresent('Success!', false, FailureHandling.STOP_ON_FAILURE)
+
+not_run: WebUI.closeBrowser()
 

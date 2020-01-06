@@ -326,17 +326,19 @@ WebUI.click(findTestObject('Object Repository/Term_Deposit_Product/Page_icon-app
 
 WebUI.click(findTestObject('Object Repository/Term_Deposit_Product/Page_icon-app/button_Next'))
 
-WebUI.click(findTestObject('Term_Deposit_Product/Page_icon-app/div_ (20)'))
+WebUI.click(findTestObject('Term_Deposit_Product/Page_icon-app/div_ (24)'))
 
-WebUI.click(findTestObject('Term_Deposit_Product/Page_icon-app/li_IC3 - VALUE DATED NOTICE (1)'))
+WebUI.click(findTestObject('Term_Deposit_Product/Page_icon-app/li_BK1 - DEFAULT INTEREST PARAMETER CHANGED EXCEPTION'))
 
-WebUI.click(findTestObject('Term_Deposit_Product/Page_icon-app/div_ (21)'))
+WebUI.click(findTestObject('Term_Deposit_Product/Page_icon-app/div_ (25)'))
 
-WebUI.click(findTestObject('Term_Deposit_Product/Page_icon-app/li_GR3 - REFERRED AC CLOSURE (1)'))
+WebUI.click(findTestObject('Term_Deposit_Product/Page_icon-app/li_LC3 - DP CONTRIBUTION EXCEED EXCEPTION'))
 
 WebUI.click(findTestObject('Object Repository/Term_Deposit_Product/Page_icon-app/button_CREATE TERM DEPOSIT'))
 
 WebUI.click(findTestObject('Term_Deposit_Product/Page_icon-app/button_Yes (1)'))
+
+WebUI.verifyTextPresent('Success', false, FailureHandling.STOP_ON_FAILURE)
 
 WebUI.closeBrowser()
 

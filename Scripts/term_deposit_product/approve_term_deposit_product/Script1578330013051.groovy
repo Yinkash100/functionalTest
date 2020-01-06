@@ -20,21 +20,21 @@ WebUI.callTestCase(findTestCase('login/login_approver'), [:], FailureHandling.ST
 
 WebUI.callTestCase(findTestCase('others/open_products'), [:], FailureHandling.STOP_ON_FAILURE)
 
-WebUI.click(findTestObject('Savings_Product/Page_icon-app/a_Savings'))
+WebUI.click(findTestObject('Term_Deposit_Product/Page_icon-app/a_Term Deposit'))
 
-WebUI.click(findTestObject('Object Repository/Savings_Product/Page_icon-app/div_Pending Verification'))
+WebUI.click(findTestObject('Object Repository/Term_Deposit_Product/Page_icon-app/div_Pending Verification'))
 
-WebUI.click(findTestObject('Savings_Product/Page_icon-app/div_ (23)'))
+WebUI.click(findTestObject('Object Repository/Term_Deposit_Product/Page_icon-app/button_No data_ant-btn ant-btn-primary'))
 
-WebUI.click(findTestObject('Object Repository/Savings_Product/Page_icon-app/li_Create savings product'))
+WebUI.click(findTestObject('Object Repository/Term_Deposit_Product/Page_icon-app/i_Iniatiating Branch_anticon anticon-loading'))
 
-WebUI.click(findTestObject('Object Repository/Savings_Product/Page_icon-app/button_YINKASH_table__btn ant-btn ant-btn-p_238afb'))
+WebUI.click(findTestObject('Object Repository/Term_Deposit_Product/Page_icon-app/button_Search Request'))
 
-WebUI.click(findTestObject('Savings_Product/Page_icon-app/a_Products Pending Verification Fetched Successfully_ant-notification-notice-close'))
+WebUI.maximizeWindow()
 
-WebUI.click(findTestObject('Object Repository/Savings_Product/Page_icon-app/button_Approve'))
+WebUI.click(findTestObject('Object Repository/Term_Deposit_Product/Page_icon-app/button_No data_ant-btn ant-btn-primary'))
 
-WebUI.click(findTestObject('Page_icon-app/button_Yes (2)'))
+WebUI.click(findTestObject('Object Repository/Term_Deposit_Product/Page_icon-app/button_Approve'))
 
 WebUI.verifyTextPresent('Success!', false, FailureHandling.STOP_ON_FAILURE)
 

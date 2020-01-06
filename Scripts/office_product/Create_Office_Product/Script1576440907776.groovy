@@ -98,7 +98,7 @@ WebUI.setText(findTestObject('office_products/Page_icon-app/input_Code_ant-input
 
 WebUI.click(findTestObject('office_products/Page_icon-app/button_Search (1)'))
 
-WebUI.click(findTestObject('office_products/Page_icon-app/input_Back Office Center_ant-checkbox-input'), FailureHandling.STOP_ON_FAILURE)
+WebUI.click(findTestObject('office_products/Page_icon-app/input_OFFICE_ant-checkbox-input'), FailureHandling.STOP_ON_FAILURE)
 
 WebUI.click(findTestObject('office_products/Page_icon-app/span_Spacer Code Look Up_ant-drawer-close-x'))
 
@@ -135,6 +135,10 @@ WebUI.click(findTestObject('office_products/Page_icon-app/button_Create Product 
 WebUI.click(findTestObject('office_products/Page_icon-app/button_Add Limit (1)'))
 
 WebUI.click(findTestObject('office_products/Page_icon-app/button_Next'))
+
+WebUI.click(findTestObject('office_products/Page_icon-app/button_Create Product (1)'))
+
+WebUI.verifyTextPresent('Success!', false, FailureHandling.STOP_ON_FAILURE)
 
 WebUI.closeBrowser()
 
