@@ -7,7 +7,7 @@
    <selectorCollection>
       <entry>
          <key>XPATH</key>
-         <value>//div[@id='4af06868-edd9-4f2c-f162-5e54878862c0']/ul/li[4]</value>
+         <value>(.//*[normalize-space(text()) and normalize-space(.)='DISBURSEMENT - Disbursement'])[1]/following::li[1]</value>
       </entry>
    </selectorCollection>
    <selectorMethod>XPATH</selectorMethod>

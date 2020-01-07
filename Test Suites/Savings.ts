@@ -13,13 +13,13 @@
    <testCaseLink>
       <guid>3599a7c0-26c6-497e-9949-12b7f692cef3</guid>
       <isReuseDriver>false</isReuseDriver>
-      <isRun>true</isRun>
+      <isRun>false</isRun>
       <testCaseId>Test Cases/savings_product/Create_Savings_Product</testCaseId>
    </testCaseLink>
    <testCaseLink>
       <guid>a79fc1b2-782a-4a4f-bc9f-9782f0fabb54</guid>
       <isReuseDriver>false</isReuseDriver>
-      <isRun>true</isRun>
+      <isRun>false</isRun>
       <testCaseId>Test Cases/savings_product/Create_Savings_Product</testCaseId>
    </testCaseLink>
    <testCaseLink>

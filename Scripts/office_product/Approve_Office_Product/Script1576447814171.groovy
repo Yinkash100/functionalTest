@@ -29,9 +29,13 @@ WebUI.click(findTestObject('office_products/Page_icon-app/i_Iniatiating Branch_a
 
 WebUI.click(findTestObject('office_products/Page_icon-app/button_Search Request'))
 
+WebUI.maximizeWindow()
+
 WebUI.click(findTestObject('office_products/Page_icon-app/button_insert_table__btn ant-btn ant-btn-primary'))
 
 WebUI.click(findTestObject('office_products/Page_icon-app/button_Approve'))
+
+WebUI.verifyTextPresent("Success!",false, FailureHandling.STOP_ON_FAILURE)
 
 WebUI.closeBrowser()
 

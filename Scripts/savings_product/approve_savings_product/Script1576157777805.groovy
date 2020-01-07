@@ -36,5 +36,7 @@ WebUI.click(findTestObject('Object Repository/Savings_Product/Page_icon-app/butt
 
 WebUI.click(findTestObject('Page_icon-app/button_Yes (2)'))
 
+WebUI.verifyTextPresent('Success!', false, FailureHandling.STOP_ON_FAILURE)
+
 WebUI.closeBrowser()
 

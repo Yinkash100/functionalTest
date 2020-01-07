@@ -38,5 +38,7 @@ WebUI.setText(findTestObject('Savings_Product/Page_icon-app/textarea_Reason_ant-
 
 WebUI.click(findTestObject('Savings_Product/Page_icon-app/button_Reject (1)'))
 
+WebUI.verifyTextPresent('Success!', false, FailureHandling.STOP_ON_FAILURE)
+
 WebUI.closeBrowser()
 

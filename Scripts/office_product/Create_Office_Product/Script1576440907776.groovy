@@ -21,18 +21,25 @@ import com.kms.katalon.core.testobject.ConditionType as ConditionType
 
 // =======Some useful Variable==============
 Date today = new Date()
+
 String todaysDay = today.format('d')
+
 String todaysDate = today.format('dd-MM-yyyy')
 
 // ==========Create a Random number generator==========
 int max = 9999
+
 int min = 101
+
 int num = max - min
+
 randomNum = (max + (new Random().nextInt() % num))
 
 // Create a custom xpath for selecting todays date from date dropdown
 String xpath = ('(.//*[normalize-space(text()) and normalize-space(.)=\'Sa\'])[1]/following::div[' + todaysDay) + ']'
+
 TestObject daySelect = new TestObject('obj')
+
 daySelect.addProperty('xpath', ConditionType.EQUALS, xpath)
 
 WebUI.callTestCase(findTestCase('login/login_default'), [('variable') : ''], FailureHandling.STOP_ON_FAILURE)
@@ -58,13 +65,24 @@ WebUI.click(daySelect)
 
 WebUI.click(findTestObject('office_products/Page_icon-app/div_ (1)'))
 
-WebUI.click(findTestObject('office_products/Page_icon-app/input_GL Sub Category_ant-select-search__field'), FailureHandling.STOP_ON_FAILURE)
+WebUI.click(findTestObject('office_products/Page_icon-app/div_Multiple Select (1)'), FailureHandling.STOP_ON_FAILURE)
 
-WebUI.delay(4)
+WebUI.click(findTestObject('office_products/Page_icon-app/div_Multiple Select'))
 
-WebUI.click(findTestObject('office_products/Page_icon-app/li_75750 - OFFICE MAINTENANCE'))
+WebUI.setText(findTestObject('office_products/Page_icon-app/input_Description_ant-input'), 'OFFICE')
 
-WebUI.click(findTestObject('office_products/Page_icon-app/li_75440 - DIESEL EXPENSES'))
+WebUI.click(findTestObject('office_products/Page_icon-app/div_ (7)'))
+
+WebUI.click(findTestObject('office_products/Page_icon-app/li_NGN - NIGERIAN NAIRA (1)'))
+
+WebUI.click(findTestObject('office_products/Page_icon-app/button_Search'))
+
+//As at when writing this test case, the GL-lookup search is extremely slow
+WebUI.delay(40)
+
+WebUI.click(findTestObject('office_products/Page_icon-app/input_Reset_ant-checkbox-input'))
+
+WebUI.click(findTestObject('office_products/Page_icon-app/span_GL Look Up_ant-drawer-close-x'))
 
 WebUI.click(findTestObject('office_products/Page_icon-app/div_ (2)'))
 
@@ -76,7 +94,13 @@ WebUI.click(findTestObject('office_products/Page_icon-app/li_NON_PARTITION - Non
 
 WebUI.click(findTestObject('office_products/Page_icon-app/div_ (4)'))
 
-WebUI.click(findTestObject('office_products/Page_icon-app/li_3636300009 - WHT RENT OFFICE - STATE'))
+WebUI.setText(findTestObject('office_products/Page_icon-app/input_Code_ant-input'), 'OFFICE')
+
+WebUI.click(findTestObject('office_products/Page_icon-app/button_Search (1)'))
+
+WebUI.click(findTestObject('office_products/Page_icon-app/input_OFFICE_ant-checkbox-input'), FailureHandling.STOP_ON_FAILURE)
+
+WebUI.click(findTestObject('office_products/Page_icon-app/span_Spacer Code Look Up_ant-drawer-close-x'))
 
 WebUI.click(findTestObject('office_products/Page_icon-app/div_ (5)'))
 
@@ -86,7 +110,7 @@ WebUI.click(findTestObject('office_products/Page_icon-app/button_Next'))
 
 WebUI.click(findTestObject('office_products/Page_icon-app/button_Add Limit'))
 
-WebUI.click(findTestObject('office_products/Page_icon-app/div_ (6)'))
+WebUI.click(findTestObject('office_products/Page_icon-app/div_ (8)'))
 
 WebUI.click(findTestObject('office_products/Page_icon-app/li_NGN - NIGERIAN NAIRA'))
 
@@ -111,6 +135,10 @@ WebUI.click(findTestObject('office_products/Page_icon-app/button_Create Product 
 WebUI.click(findTestObject('office_products/Page_icon-app/button_Add Limit (1)'))
 
 WebUI.click(findTestObject('office_products/Page_icon-app/button_Next'))
+
+WebUI.click(findTestObject('office_products/Page_icon-app/button_Create Product (1)'))
+
+WebUI.verifyTextPresent('Success!', false, FailureHandling.STOP_ON_FAILURE)
 
 WebUI.closeBrowser()
 
