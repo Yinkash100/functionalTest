@@ -14,29 +14,4 @@ import com.kms.katalon.core.webservice.keyword.WSBuiltInKeywords as WS
 import com.kms.katalon.core.webui.keyword.WebUiBuiltInKeywords as WebUI
 import com.kms.katalon.core.windows.keyword.WindowsBuiltinKeywords as Windows
 import internal.GlobalVariable as GlobalVariable
-import org.openqa.selenium.Keys as Keys
-
-WebUI.callTestCase(findTestCase('login/login_approver'), [:], FailureHandling.STOP_ON_FAILURE)
-
-WebUI.callTestCase(findTestCase('others/open_products'), [:], FailureHandling.STOP_ON_FAILURE)
-
-WebUI.click(findTestObject('Term_Deposit_Product/Page_icon-app/a_Term Deposit'))
-
-WebUI.click(findTestObject('Object Repository/Term_Deposit_Product/Page_icon-app/div_Pending Verification'))
-
-WebUI.click(findTestObject('Object Repository/Term_Deposit_Product/Page_icon-app/button_No data_ant-btn ant-btn-primary'))
-
-WebUI.click(findTestObject('Object Repository/Term_Deposit_Product/Page_icon-app/i_Iniatiating Branch_anticon anticon-loading'))
-
-WebUI.click(findTestObject('Object Repository/Term_Deposit_Product/Page_icon-app/button_Search Request'))
-
-WebUI.maximizeWindow()
-
-WebUI.click(findTestObject('Term_Deposit_Product/Page_icon-app/button_insert_table__btn ant-btn ant-btn-primary'))
-
-WebUI.click(findTestObject('Object Repository/Term_Deposit_Product/Page_icon-app/button_Approve'))
-
-WebUI.verifyTextPresent('Success!', false, FailureHandling.STOP_ON_FAILURE)
-
-WebUI.closeBrowser()
 
