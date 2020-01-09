@@ -14,4 +14,50 @@ import com.kms.katalon.core.webservice.keyword.WSBuiltInKeywords as WS
 import com.kms.katalon.core.webui.keyword.WebUiBuiltInKeywords as WebUI
 import com.kms.katalon.core.windows.keyword.WindowsBuiltinKeywords as Windows
 import internal.GlobalVariable as GlobalVariable
+import org.openqa.selenium.Keys as Keys
+
+WebUI.callTestCase(findTestCase('login/login_default'), [('variable') : ''], FailureHandling.STOP_ON_FAILURE)
+
+WebUI.callTestCase(findTestCase('others/open_products'), [:], FailureHandling.STOP_ON_FAILURE)
+
+WebUI.click(findTestObject('Object Repository/Term_Deposit_Product/Page_icon-app/a_Term Deposit'))
+
+WebUI.click(findTestObject('Object Repository/Term_Deposit_Product/Page_icon-app/button_Closed_ant-btn ant-btn-primary'))
+
+WebUI.click(findTestObject('Object Repository/Term_Deposit_Product/Page_icon-app/button_Search (13)'))
+
+WebUI.maximizeWindow()
+
+WebUI.mouseOver(findTestObject('Term_Deposit_Product/Page_icon-app/button_ACTIVE_table__btn ant-btn ant-btn-primary ant-dropdown-trigger (1)'))
+
+WebUI.waitForElementClickable(findTestObject('Term_Deposit_Product/Page_icon-app/a_Edit (1)'), 0)
+
+WebUI.click(findTestObject('Term_Deposit_Product/Page_icon-app/a_Edit (1)'))
+
+WebUI.setText(findTestObject('Object Repository/Term_Deposit_Product/Page_icon-app/input_Minimum Age_ant-input ant-input (1)'), 
+    '99')
+
+WebUI.click(findTestObject('Object Repository/Term_Deposit_Product/Page_icon-app/div_Documents'))
+
+WebUI.click(findTestObject('Object Repository/Term_Deposit_Product/Page_icon-app/div_Currency Information'))
+
+WebUI.click(findTestObject('Object Repository/Term_Deposit_Product/Page_icon-app/div_Fee Information'))
+
+WebUI.click(findTestObject('Object Repository/Term_Deposit_Product/Page_icon-app/div_ (26)'))
+
+WebUI.click(findTestObject('Object Repository/Term_Deposit_Product/Page_icon-app/li_TDABOOK - TD ACCOUNT BOOKING'))
+
+WebUI.click(findTestObject('Term_Deposit_Product/Page_icon-app/div_ (27)'))
+
+WebUI.click(findTestObject('Object Repository/Term_Deposit_Product/Page_icon-app/li_TDABOOK'))
+
+WebUI.click(findTestObject('Object Repository/Term_Deposit_Product/Page_icon-app/button_Add Fee (1)'))
+
+WebUI.click(findTestObject('Object Repository/Term_Deposit_Product/Page_icon-app/div_Spacer  Interest'))
+
+WebUI.click(findTestObject('Object Repository/Term_Deposit_Product/Page_icon-app/svg (2)'))
+
+WebUI.click(findTestObject('Object Repository/Term_Deposit_Product/Page_icon-app/button_UPDATE DETAILS'))
+
+WebUI.doubleClick(findTestObject('Object Repository/Term_Deposit_Product/Page_icon-app/div_Success (1)'))
 

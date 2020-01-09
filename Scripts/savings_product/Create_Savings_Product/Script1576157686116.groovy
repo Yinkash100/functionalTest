@@ -25,6 +25,8 @@ String todaysDay = today.format('d')
 
 String todaysDate = today.format('dd-MM-yyyy')
 
+Integer todayPlusThree = Integer.parseInt(todaysDay) + 3
+
 int max = 9999
 
 int min = 101
@@ -33,7 +35,7 @@ int num = max - min
 
 randomNum = (max + (new Random().nextInt() % num))
 
-String xpath = ('(.//*[normalize-space(text()) and normalize-space(.)=\'Sa\'])[1]/following::div[' + todaysDay) + ']'
+String xpath = ('(.//*[normalize-space(text()) and normalize-space(.)=\'Sa\'])[1]/following::div[' + todayPlusThree) + ']'
 
 TestObject daySelect = new TestObject('obj')
 
@@ -70,15 +72,16 @@ WebUI.click(findTestObject('Savings_Product/Page_icon-app/div_ (2)'))
 
 WebUI.click(findTestObject('Object Repository/Savings_Product/Page_icon-app/li_RETAIL - Retail customer'))
 
-WebUI.click(findTestObject('Object Repository/Savings_Product/Page_icon-app/div_Select'))
+not_run: WebUI.click(findTestObject('Object Repository/Savings_Product/Page_icon-app/div_Select'))
 
-WebUI.delay(5)
+not_run: WebUI.delay(5)
 
-WebUI.setText(findTestObject('Object Repository/Savings_Product/Page_icon-app/input_Select_ant-select-search__field'), 'sav')
+not_run: WebUI.setText(findTestObject('Object Repository/Savings_Product/Page_icon-app/input_Select_ant-select-search__field'), 
+    'sav')
 
-WebUI.click(findTestObject('Object Repository/Savings_Product/Page_icon-app/li_29290 - OGBONGE SAVINGS ACCOUNT'))
+not_run: WebUI.click(findTestObject('Object Repository/Savings_Product/Page_icon-app/li_29290 - OGBONGE SAVINGS ACCOUNT'))
 
-WebUI.click(findTestObject('Object Repository/Savings_Product/Page_icon-app/li_29100 - SAVINGS - CHILDREN'))
+not_run: WebUI.click(findTestObject('Object Repository/Savings_Product/Page_icon-app/li_29100 - SAVINGS - CHILDREN'))
 
 WebUI.click(findTestObject('Object Repository/Savings_Product/Page_icon-app/button_Auto Generate Account Number_ant-switch'))
 

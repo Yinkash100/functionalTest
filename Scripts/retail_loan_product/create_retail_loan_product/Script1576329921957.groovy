@@ -30,6 +30,8 @@ String todaysYear = today.format('yy')
 
 String todaysDate = today.format('dd-MM-yyyy')
 
+Integer todayPlusThree = Integer.parseInt(todaysDay) + 3
+
 // ==========Create a Random number generator==========
 int max = 9999
 
@@ -40,7 +42,7 @@ int num = max - min
 randomNum = (max + (new Random().nextInt() % num))
 
 // Create a custom xpath for selecting todays date from date dropdown
-String xpath = ('(.//*[normalize-space(text()) and normalize-space(.)=\'Sa\'])[1]/following::div[' + todaysDay) + ']'
+String xpath = ('(.//*[normalize-space(text()) and normalize-space(.)=\'Sa\'])[1]/following::div[' + todayPlusThree) + ']'
 
 TestObject daySelect = new TestObject('obj')
 
@@ -67,9 +69,9 @@ WebUI.click(findTestObject('Object Repository/Retail_Loan_Product/Page_Retail Lo
 
 WebUI.click(findTestObject('Object Repository/Retail_Loan_Product/Page_Retail Loan  Icon App/li_BOTH - Both resident and non-resident'))
 
-not_run: WebUI.click(findTestObject('Retail_Loan_Product/Page_Retail Loan  Icon App/div_ (1)'))
+WebUI.click(findTestObject('Retail_Loan_Product/Page_Retail Loan  Icon App/div_ (1)'))
 
-not_run: WebUI.click(findTestObject('Object Repository/Retail_Loan_Product/Page_Retail Loan  Icon App/li_CORPORATE - Corporate customer'))
+WebUI.click(findTestObject('Object Repository/Retail_Loan_Product/Page_Retail Loan  Icon App/li_CORPORATE - Corporate customer'))
 
 WebUI.setText(findTestObject('Object Repository/Retail_Loan_Product/Page_Retail Loan  Icon App/input_Minimum Age_ant-input ant-input'), 
     '5')
@@ -86,9 +88,23 @@ WebUI.click(findTestObject('Object Repository/Retail_Loan_Product/Page_Retail Lo
 
 WebUI.click(findTestObject('Retail_Loan_Product/Page_Retail Loan  Icon App/div_ (2)'))
 
-WebUI.delay(3)
+WebUI.click(findTestObject('Retail_Loan_Product/Page_Retail Loan  Icon App/div_ (23)'))
 
-WebUI.click(findTestObject('Object Repository/Retail_Loan_Product/Page_Retail Loan  Icon App/li_15925 - STRUCTURED TERM LOAN CORPORATE'))
+WebUI.click(findTestObject('Retail_Loan_Product/Page_Retail Loan  Icon App/li_NGN - NIGERIAN NAIRA (1)'))
+
+WebUI.setText(findTestObject('Retail_Loan_Product/Page_Retail Loan  Icon App/input_Description_ant-input'), 'LOAN')
+
+WebUI.click(findTestObject('Retail_Loan_Product/Page_Retail Loan  Icon App/button_Search (11)'))
+
+WebUI.click(findTestObject('Retail_Loan_Product/Page_Retail Loan  Icon App/input_VAULT_ant-checkbox-input'))
+
+WebUI.click(findTestObject('Retail_Loan_Product/Page_Retail Loan  Icon App/label_VAULT_ant-checkbox-wrapper'))
+
+WebUI.click(findTestObject('Retail_Loan_Product/Page_Retail Loan  Icon App/label_BOXED CASH GL-NGN_ant-checkbox-wrapper'))
+
+WebUI.click(findTestObject('Retail_Loan_Product/Page_Retail Loan  Icon App/button_Confirm Selected'))
+
+not_run: WebUI.click(findTestObject('Object Repository/Retail_Loan_Product/Page_Retail Loan  Icon App/li_15925 - STRUCTURED TERM LOAN CORPORATE'))
 
 WebUI.click(findTestObject('Object Repository/Retail_Loan_Product/Page_Retail Loan  Icon App/button_Next'))
 
@@ -104,10 +120,10 @@ WebUI.click(findTestObject('Retail_Loan_Product/Page_Retail Loan  Icon App/div_ 
 
 WebUI.click(findTestObject('Object Repository/Retail_Loan_Product/Page_Retail Loan  Icon App/li_MONTHLY - Monthly'))
 
-WebUI.sendKeys(findTestObject('Retail_Loan_Product/Page_Retail Loan  Icon App/input_Interest Receivable Spacer_ant-input'), 
+WebUI.sendKeys(findTestObject('Retail_Loan_Product/Page_Retail Loan  Icon App/input_Interest Receivable Spacer_ant-input (1)'), 
     Keys.chord(Keys.ENTER))
 
-WebUI.setText(findTestObject('Retail_Loan_Product/Page_Retail Loan  Icon App/input_Code_ant-input'), 'LOAN')
+WebUI.setText(findTestObject('Retail_Loan_Product/Page_Retail Loan  Icon App/input_Code_ant-input (11)'), 'LOAN')
 
 WebUI.click(findTestObject('Retail_Loan_Product/Page_Retail Loan  Icon App/button_Search (4)'))
 

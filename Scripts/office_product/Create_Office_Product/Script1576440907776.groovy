@@ -26,6 +26,8 @@ String todaysDay = today.format('d')
 
 String todaysDate = today.format('dd-MM-yyyy')
 
+Integer todayPlusThree = Integer.parseInt(todaysDay) + 3
+
 // ==========Create a Random number generator==========
 int max = 9999
 
@@ -36,7 +38,7 @@ int num = max - min
 randomNum = (max + (new Random().nextInt() % num))
 
 // Create a custom xpath for selecting todays date from date dropdown
-String xpath = ('(.//*[normalize-space(text()) and normalize-space(.)=\'Sa\'])[1]/following::div[' + todaysDay) + ']'
+String xpath = ('(.//*[normalize-space(text()) and normalize-space(.)=\'Sa\'])[1]/following::div[' + todayPlusThree) + ']'
 
 TestObject daySelect = new TestObject('obj')
 
