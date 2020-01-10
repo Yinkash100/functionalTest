@@ -15,16 +15,15 @@ import com.kms.katalon.core.webui.keyword.WebUiBuiltInKeywords as WebUI
 import com.kms.katalon.core.windows.keyword.WindowsBuiltinKeywords as Windows
 import internal.GlobalVariable as GlobalVariable
 import org.openqa.selenium.Keys as Keys
-import groovy.time.TimeCategory as TimeCategory
 import java.util.Random as Random
 import com.kms.katalon.core.testobject.ConditionType as ConditionType
 
 // =======Some useful Variable==============
 Date today = new Date()
 
-String todaysDay = today.format('d')
+String currentDateTime = today.format('dd-MM-yyyy-hh:mm-a')
 
-String todaysDate = today.format('dd-MM-yyyy')
+String todaysDay = today.format('d')
 
 Integer todayPlusThree = Integer.parseInt(todaysDay) + 3
 
@@ -80,7 +79,7 @@ WebUI.click(findTestObject('office_products/Page_icon-app/li_NGN - NIGERIAN NAIR
 WebUI.click(findTestObject('office_products/Page_icon-app/button_Search'))
 
 //As at when writing this test case, the GL-lookup search is extremely slow
-WebUI.delay(40)
+not_run: WebUI.delay(40)
 
 WebUI.click(findTestObject('office_products/Page_icon-app/input_Reset_ant-checkbox-input'))
 
@@ -140,7 +139,9 @@ WebUI.click(findTestObject('office_products/Page_icon-app/button_Next'))
 
 WebUI.click(findTestObject('office_products/Page_icon-app/button_Create Product (1)'))
 
-WebUI.verifyTextPresent('Success!', false, FailureHandling.STOP_ON_FAILURE)
-
-WebUI.closeBrowser()
+if (WebUI.verifyTextPresent('Success', false, FailureHandling.OPTIONAL)) {
+    WebUI.closeBrowser()
+} else {
+    WebUI.takeScreenshot(('errors/create_office_product' + currentDateTime) + '.png')
+}
 

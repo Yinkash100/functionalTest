@@ -15,10 +15,6 @@ import com.kms.katalon.core.webui.keyword.WebUiBuiltInKeywords as WebUI
 import com.kms.katalon.core.windows.keyword.WindowsBuiltinKeywords as Windows
 import internal.GlobalVariable as GlobalVariable
 
-Date today = new Date()
-
-String currentDateTime = today.format('dd-MM-yyyy-hh:mm-a')
-
 WebUI.callTestCase(findTestCase('login/login_approver'), [:], FailureHandling.STOP_ON_FAILURE)
 
 WebUI.callTestCase(findTestCase('others/open_products'), [:], FailureHandling.STOP_ON_FAILURE)
@@ -39,8 +35,8 @@ WebUI.click(findTestObject('office_products/Page_icon-app/button_insert_table__b
 
 WebUI.click(findTestObject('office_products/Page_icon-app/button_Approve'))
 
-if(WebUI.verifyTextPresent("Success!", false, FailureHandling.OPTIONAL)) {
-    WebUI.closeBrowser()
-} else {
-    WebUI.takeScreenshot(('errors/approve_office_product' + currentDateTime) + '.png')
-}
+WebUI.verifyTextPresent("Success!",false, FailureHandling.STOP_ON_FAILURE)
+
+WebUI.closeBrowser()
+
+
