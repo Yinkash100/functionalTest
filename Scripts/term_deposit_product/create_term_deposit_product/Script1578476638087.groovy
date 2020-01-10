@@ -15,15 +15,14 @@ import com.kms.katalon.core.webui.keyword.WebUiBuiltInKeywords as WebUI
 import com.kms.katalon.core.windows.keyword.WindowsBuiltinKeywords as Windows
 import internal.GlobalVariable as GlobalVariable
 import org.openqa.selenium.Keys as Keys
-import groovy.time.TimeCategory as TimeCategory
 import java.util.Random as Random
 import com.kms.katalon.core.testobject.ConditionType as ConditionType
 
 Date today = new Date()
 
-String todaysDay = today.format('d')
+String currentDateTime = today.format('yyyy-mm-dd hh:mm:ss.a')
 
-String todaysDate = today.format('dd-MM-yyyy')
+String todaysDay = today.format('d')
 
 Integer todayPlusThree = Integer.parseInt(todaysDay) + 3
 
@@ -99,7 +98,7 @@ WebUI.click(findTestObject('Object Repository/Term_Deposit_Product/Page_icon-app
 
 WebUI.click(findTestObject('Term_Deposit_Product/Page_icon-app/button_Search (1)'))
 
-WebUI.delay(50)
+not_run: WebUI.delay(50)
 
 WebUI.click(findTestObject('Object Repository/Term_Deposit_Product/Page_icon-app/input_NGN_ant-checkbox-input'))
 
@@ -340,7 +339,9 @@ WebUI.click(findTestObject('Object Repository/Term_Deposit_Product/Page_icon-app
 
 WebUI.click(findTestObject('Term_Deposit_Product/Page_icon-app/button_Yes (1)'))
 
-WebUI.verifyTextPresent('Success', false, FailureHandling.STOP_ON_FAILURE)
+if (WebUI.verifyTextPresent('Success', false, FailureHandling.OPTIONAL)) {
+	WebUI.closeBrowser()
+} else {
+	WebUI.takeScreenshot('errors/'+currentDateTime + '_create_term_deposit_product.png')
 
-WebUI.closeBrowser()
-
+}

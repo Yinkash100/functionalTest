@@ -15,7 +15,6 @@ import com.kms.katalon.core.webui.keyword.WebUiBuiltInKeywords as WebUI
 import com.kms.katalon.core.windows.keyword.WindowsBuiltinKeywords as Windows
 import internal.GlobalVariable as GlobalVariable
 import org.openqa.selenium.Keys as Keys
-import groovy.time.TimeCategory as TimeCategory
 import java.util.Random as Random
 import com.kms.katalon.core.testobject.ConditionType as ConditionType
 
@@ -23,7 +22,7 @@ Date today = new Date()
 
 String todaysDay = today.format('d')
 
-String todaysDate = today.format('dd-MM-yyyy')
+String currentDateTime = today.format('yyyy-mm-dd hh:mm:ss.a')
 
 Integer todayPlusThree = Integer.parseInt(todaysDay) + 3
 
@@ -251,7 +250,10 @@ WebUI.click(findTestObject('Savings_Product/Page_icon-app/button_CREATE SAVINGS 
 
 WebUI.click(findTestObject('Savings_Product/Page_icon-app/button_Yes (3)'))
 
-WebUI.verifyTextPresent('Success!', false, FailureHandling.STOP_ON_FAILURE)
+if (WebUI.verifyTextPresent('Success!', false, FailureHandling.OPTIONAL)) {
+	WebUI.closeBrowser()
+} else {
+	WebUI.takeScreenshot('errors/'+currentDateTime + '_create_savings_product.png')
+}
 
-WebUI.closeBrowser()
 

@@ -16,6 +16,10 @@ import com.kms.katalon.core.windows.keyword.WindowsBuiltinKeywords as Windows
 import internal.GlobalVariable as GlobalVariable
 import org.openqa.selenium.Keys as Keys
 
+Date today = new Date()
+
+String currentDateTime = today.format('yyyy-mm-dd hh:mm:ss.a')
+
 WebUI.callTestCase(findTestCase('login/login_approver'), [:], FailureHandling.STOP_ON_FAILURE)
 
 WebUI.callTestCase(findTestCase('others/open_products'), [:], FailureHandling.STOP_ON_FAILURE)
@@ -38,7 +42,10 @@ WebUI.setText(findTestObject('Savings_Product/Page_icon-app/textarea_Reason_ant-
 
 WebUI.click(findTestObject('Savings_Product/Page_icon-app/button_Reject (1)'))
 
-WebUI.verifyTextPresent('Success!', false, FailureHandling.STOP_ON_FAILURE)
+if (WebUI.verifyTextPresent('Success!', false, FailureHandling.OPTIONAL)) {
+	WebUI.closeBrowser()
+} else {
+	WebUI.takeScreenshot('errors/'+currentDateTime + '_reject_savings_product.png')
+}
 
-WebUI.closeBrowser()
 

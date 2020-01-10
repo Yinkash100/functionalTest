@@ -15,6 +15,10 @@ import com.kms.katalon.core.webui.keyword.WebUiBuiltInKeywords as WebUI
 import com.kms.katalon.core.windows.keyword.WindowsBuiltinKeywords as Windows
 import internal.GlobalVariable as GlobalVariable
 
+Date today = new Date()
+
+String currentDateTime = today.format('yyyy-mm-dd hh:mm:ss.a')
+
 WebUI.callTestCase(findTestCase('login/login_default'), [('variable') : ''], FailureHandling.STOP_ON_FAILURE)
 
 WebUI.callTestCase(findTestCase('others/open_products'), [:], FailureHandling.STOP_ON_FAILURE)
@@ -59,5 +63,10 @@ WebUI.click(findTestObject('Savings_Product/Page_icon-app/button_MODIFY SAVINGS 
 
 WebUI.click(findTestObject('Savings_Product/Page_icon-app/button_Yes (3)'))
 
-WebUI.closeBrowser()
+if (WebUI.verifyTextPresent('Success', false, FailureHandling.OPTIONAL)) {
+	WebUI.closeBrowser()
+} else {
+	WebUI.takeScreenshot('errors/'+currentDateTime + '_modify_savings_product.png')
+}
+
 

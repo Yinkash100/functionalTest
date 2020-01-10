@@ -23,12 +23,6 @@
       <testCaseId>Test Cases/savings_product/Create_Savings_Product</testCaseId>
    </testCaseLink>
    <testCaseLink>
-      <guid>2ecad73e-0aef-4e37-8843-f29c540d7286</guid>
-      <isReuseDriver>false</isReuseDriver>
-      <isRun>true</isRun>
-      <testCaseId>Test Cases/savings_product/approve_savings_product</testCaseId>
-   </testCaseLink>
-   <testCaseLink>
       <guid>7099b7eb-861e-43b7-9567-2d89ad4a95bb</guid>
       <isReuseDriver>false</isReuseDriver>
       <isRun>true</isRun>

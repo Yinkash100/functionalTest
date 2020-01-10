@@ -34,4 +34,22 @@
       <isRun>true</isRun>
       <testCaseId>Test Cases/office_product/Reject_Office_Product</testCaseId>
    </testCaseLink>
+   <testCaseLink>
+      <guid>350088ff-9584-44a3-b82e-60ad643532ac</guid>
+      <isReuseDriver>false</isReuseDriver>
+      <isRun>true</isRun>
+      <testCaseId>Test Cases/savings_product/modify_savings_product</testCaseId>
+   </testCaseLink>
+   <testCaseLink>
+      <guid>d5865f30-ad53-4259-bc47-be4f65a14eaf</guid>
+      <isReuseDriver>false</isReuseDriver>
+      <isRun>true</isRun>
+      <testCaseId>Test Cases/office_product/modify_office_product</testCaseId>
+   </testCaseLink>
+   <testCaseLink>
+      <guid>b7c4df15-be2d-4f1e-ab44-a67b5477e574</guid>
+      <isReuseDriver>false</isReuseDriver>
+      <isRun>true</isRun>
+      <testCaseId>Test Cases/office_product/approve_modify_office_product</testCaseId>
+   </testCaseLink>
 </TestSuiteEntity>

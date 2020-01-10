@@ -16,6 +16,10 @@ import com.kms.katalon.core.windows.keyword.WindowsBuiltinKeywords as Windows
 import internal.GlobalVariable as GlobalVariable
 import org.openqa.selenium.Keys as Keys
 
+Date today = new Date()
+
+String currentDateTime = today.format('yyyy-mm-dd hh:mm:ss.a')
+
 WebUI.callTestCase(findTestCase('login/login_approver'), [:], FailureHandling.STOP_ON_FAILURE)
 
 WebUI.callTestCase(findTestCase('others/open_products'), [:], FailureHandling.STOP_ON_FAILURE)
@@ -36,7 +40,9 @@ WebUI.click(findTestObject('Term_Deposit_Product/Page_icon-app/button_insert_tab
 
 WebUI.click(findTestObject('Object Repository/Term_Deposit_Product/Page_icon-app/button_Approve'))
 
-WebUI.verifyTextPresent('Success!', false, FailureHandling.STOP_ON_FAILURE)
-
-WebUI.closeBrowser()
+if (WebUI.verifyTextPresent('Success!', false, FailureHandling.OPTIONAL)) {
+	WebUI.closeBrowser()
+} else {
+	WebUI.takeScreenshot('errors/'+currentDateTime + '_approve_term_deposit_product.png')
+}
 
