@@ -14,10 +14,46 @@ import com.kms.katalon.core.webservice.keyword.WSBuiltInKeywords as WS
 import com.kms.katalon.core.webui.keyword.WebUiBuiltInKeywords as WebUI
 import com.kms.katalon.core.windows.keyword.WindowsBuiltinKeywords as Windows
 import internal.GlobalVariable as GlobalVariable
+import org.openqa.selenium.Keys as Keys
+
+// =======Some useful Variable==============
+Date today = new Date()
+
+String currentDateTime = today.format('dd-MM-yyyy-hh:mm-a')
 
 WebUI.callTestCase(findTestCase('login/login_default'), [('variable') : ''], FailureHandling.STOP_ON_FAILURE)
 
 WebUI.callTestCase(findTestCase('others/open_products'), [:], FailureHandling.STOP_ON_FAILURE)
 
-WebUI.click(findTestObject('office_products/Page_icon-app/a_Office'))
+WebUI.click(findTestObject('Object Repository/office_products/Page_icon-app/a_Office'))
+
+WebUI.click(findTestObject('Object Repository/office_products/Page_icon-app/button_Pending Verification_ant-btn ant-btn_992078'))
+
+WebUI.click(findTestObject('office_products/Page_icon-app/button_No data_ant-btn ant-btn-primary (1)'))
+
+WebUI.click(findTestObject('office_products/Page_icon-app/i_Initiating Branch_ant-select-arrow-icon anticon anticon-down'))
+
+WebUI.click(findTestObject('office_products/Page_icon-app/button_Search Request (1)'))
+
+WebUI.click(findTestObject('Object Repository/office_products/Page_icon-app/button_Search Product'))
+
+WebUI.click(findTestObject('office_products/Page_icon-app/button_ACTIVE_table__btn ant-btn ant-btn-primary ant-dropdown-trigger'))
+
+WebUI.click(findTestObject('Object Repository/office_products/Page_icon-app/a_ View'))
+
+WebUI.click(findTestObject('office_products/Page_icon-app/a_Product successfully fetched_ant-notification-notice-close'))
+
+WebUI.click(findTestObject('Object Repository/office_products/Page_icon-app/button_EDIT'))
+
+WebUI.click(findTestObject('Object Repository/office_products/Page_icon-app/div_PARTITION - Partition'))
+
+WebUI.click(findTestObject('Object Repository/office_products/Page_icon-app/li_NON_PARTITION - Non partition (1)'))
+
+WebUI.click(findTestObject('office_products/Page_icon-app/button_Update (1)'))
+
+if (WebUI.verifyTextPresent('Success', false, FailureHandling.OPTIONAL)) {
+    WebUI.closeBrowser()
+} else {
+    WebUI.takeScreenshot(('errors/modify_office_product' + currentDateTime) + '.png')
+}
 
