@@ -17,7 +17,7 @@ import internal.GlobalVariable as GlobalVariable
 
 Date today = new Date()
 
-String currentDateTime = today.format('dd-MM-yyyy-hh:mm-a')
+String currentDateTime = today.format('yyyy-mm-dd hh:mm:ss.a')
 
 WebUI.callTestCase(findTestCase('login/login_approver'), [:], FailureHandling.STOP_ON_FAILURE)
 
@@ -42,5 +42,5 @@ WebUI.click(findTestObject('office_products/Page_icon-app/button_Approve'))
 if(WebUI.verifyTextPresent("Success!", false, FailureHandling.OPTIONAL)) {
     WebUI.closeBrowser()
 } else {
-    WebUI.takeScreenshot(('errors/approve_office_product' + currentDateTime) + '.png')
+    WebUI.takeScreenshot('errors/'+currentDateTime + '_approve_office_product.png')
 }

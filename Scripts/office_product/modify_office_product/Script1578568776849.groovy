@@ -19,7 +19,7 @@ import org.openqa.selenium.Keys as Keys
 // =======Some useful Variable==============
 Date today = new Date()
 
-String currentDateTime = today.format('dd-MM-yyyy-hh:mm-a')
+String currentDateTime = today.format('yyyy-mm-dd hh:mm:ss.a')
 
 WebUI.callTestCase(findTestCase('login/login_default'), [('variable') : ''], FailureHandling.STOP_ON_FAILURE)
 
@@ -29,11 +29,13 @@ WebUI.click(findTestObject('Object Repository/office_products/Page_icon-app/a_Of
 
 WebUI.click(findTestObject('Object Repository/office_products/Page_icon-app/button_Pending Verification_ant-btn ant-btn_992078'))
 
-WebUI.click(findTestObject('office_products/Page_icon-app/button_No data_ant-btn ant-btn-primary (1)'))
+not_run: WebUI.click(findTestObject('office_products/Page_icon-app/button_No data_ant-btn ant-btn-primary (1)'))
 
-WebUI.click(findTestObject('office_products/Page_icon-app/i_Initiating Branch_ant-select-arrow-icon anticon anticon-down'))
+not_run: WebUI.click(findTestObject('office_products/Page_icon-app/i_Initiating Branch_ant-select-arrow-icon anticon anticon-down'))
 
-WebUI.click(findTestObject('office_products/Page_icon-app/button_Search Request (1)'))
+not_run: WebUI.click(findTestObject('office_products/Page_icon-app/button_Search Request (1)'))
+
+WebUI.maximizeWindow()
 
 WebUI.click(findTestObject('Object Repository/office_products/Page_icon-app/button_Search Product'))
 
@@ -47,13 +49,13 @@ WebUI.click(findTestObject('Object Repository/office_products/Page_icon-app/butt
 
 WebUI.click(findTestObject('Object Repository/office_products/Page_icon-app/div_PARTITION - Partition'))
 
-WebUI.click(findTestObject('Object Repository/office_products/Page_icon-app/li_NON_PARTITION - Non partition (1)'))
+WebUI.click(findTestObject('office_products/Page_icon-app/li_PARTITION - Partition'))
 
 WebUI.click(findTestObject('office_products/Page_icon-app/button_Update (1)'))
 
 if (WebUI.verifyTextPresent('Success', false, FailureHandling.OPTIONAL)) {
     WebUI.closeBrowser()
 } else {
-    WebUI.takeScreenshot(('errors/modify_office_product' + currentDateTime) + '.png')
+    WebUI.takeScreenshot('errors/'+currentDateTime + '_modify_office_product.png')
 }
 

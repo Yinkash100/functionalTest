@@ -21,7 +21,7 @@ import com.kms.katalon.core.testobject.ConditionType as ConditionType
 // =======Some useful Variable==============
 Date today = new Date()
 
-String currentDateTime = today.format('dd-MM-yyyy-hh:mm-a')
+String currentDateTime = today.format('yyyy-mm-dd hh:mm:ss.a')
 
 String todaysDay = today.format('d')
 
@@ -85,7 +85,7 @@ WebUI.click(findTestObject('office_products/Page_icon-app/input_Reset_ant-checkb
 
 WebUI.click(findTestObject('office_products/Page_icon-app/span_GL Look Up_ant-drawer-close-x'))
 
-WebUI.click(findTestObject('office_products/Page_icon-app/div_ (2)'))
+WebUI.click(findTestObject(String currentDateTime = today.format('dd-MM-yyyy-hh:mm-a')'office_products/Page_icon-app/div_ (2)'))
 
 WebUI.click(findTestObject('office_products/Page_icon-app/li_BOTH - Both'))
 
@@ -115,21 +115,21 @@ WebUI.click(findTestObject('office_products/Page_icon-app/div_ (8)'))
 
 WebUI.click(findTestObject('office_products/Page_icon-app/li_NGN - NIGERIAN NAIRA'))
 
-WebUI.setText(findTestObject('office_products/Page_icon-app/input_Credit Balance Limit_ant-input ant-input'), '1,000,000,000,000,000.13')
+WebUI.setText(findTestObject('office_products/Page_icon-app/input_Credit Balance Limit_ant-input ant-input'), '1,000,000,000,000.13')
 
-WebUI.setText(findTestObject('office_products/Page_icon-app/input_Credit Cash Limit_ant-input ant-input'), '1,000,000,000,000,000.13')
+WebUI.setText(findTestObject('office_products/Page_icon-app/input_Credit Cash Limit_ant-input ant-input'), '1,000,000,000,000.13')
 
-WebUI.setText(findTestObject('office_products/Page_icon-app/input_Credit Clearing Limit_ant-input ant-input'), '1,000,000,000,000,000.13')
+WebUI.setText(findTestObject('office_products/Page_icon-app/input_Credit Clearing Limit_ant-input ant-input'), '1,000,000,000,000.13')
 
 WebUI.setText(findTestObject('office_products/Page_icon-app/input_Credit Transfer Limit_ant-input ant-input'), '1,000,000,000,000,000.13')
 
-WebUI.setText(findTestObject('office_products/Page_icon-app/input_Debit Balance Limit_ant-input ant-input'), '1,000,000,000,000,000.13')
+WebUI.setText(findTestObject('office_products/Page_icon-app/input_Debit Balance Limit_ant-input ant-input'), '1,000,000,000,000.13')
 
-WebUI.setText(findTestObject('office_products/Page_icon-app/input_Debit Cash Limit_ant-input ant-input'), '1,000,000,000,000,000.13')
+WebUI.setText(findTestObject('office_products/Page_icon-app/input_Debit Cash Limit_ant-input ant-input'), '1,000,000,000,000.13')
 
-WebUI.setText(findTestObject('office_products/Page_icon-app/input_Debit Clearing Limit_ant-input ant-input'), '1,000,000,000,000,000.13')
+WebUI.setText(findTestObject('office_products/Page_icon-app/input_Debit Clearing Limit_ant-input ant-input'), '1,000,000,000,000.13')
 
-WebUI.setText(findTestObject('office_products/Page_icon-app/input_Debit Transfer Limit_ant-input ant-input'), '1,000,000,000,000,000.13')
+WebUI.setText(findTestObject('office_products/Page_icon-app/input_Debit Transfer Limit_ant-input ant-input'), '1,000,000,000,000.13')
 
 WebUI.click(findTestObject('office_products/Page_icon-app/button_Create Product (1)'))
 
@@ -142,6 +142,6 @@ WebUI.click(findTestObject('office_products/Page_icon-app/button_Create Product 
 if (WebUI.verifyTextPresent('Success', false, FailureHandling.OPTIONAL)) {
     WebUI.closeBrowser()
 } else {
-    WebUI.takeScreenshot(('errors/create_office_product' + currentDateTime) + '.png')
+    WebUI.takeScreenshot('errors/'+currentDateTime + '_create_office_product.png')
 }
 
