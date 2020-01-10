@@ -253,5 +253,5 @@ WebUI.click(findTestObject('Savings_Product/Page_icon-app/button_Yes (3)'))
 
 WebUI.verifyTextPresent('Success!', false, FailureHandling.STOP_ON_FAILURE)
 
-not_run: WebUI.closeBrowser()
+WebUI.closeBrowser()
 
