@@ -85,7 +85,8 @@ WebUI.click(findTestObject('office_products/Page_icon-app/input_Reset_ant-checkb
 
 WebUI.click(findTestObject('office_products/Page_icon-app/span_GL Look Up_ant-drawer-close-x'))
 
-WebUI.click(findTestObject(String currentDateTime = today.format('dd-MM-yyyy-hh:mm-a')'office_products/Page_icon-app/div_ (2)'))
+WebUI.click(findTestObject(String currentDateTime = todayint max = 9999
+.format('dd-MM-yyyy-hh:mm-a')'office_products/Page_icon-app/div_ (2)'))
 
 WebUI.click(findTestObject('office_products/Page_icon-app/li_BOTH - Both'))
 
@@ -140,8 +141,12 @@ WebUI.click(findTestObject('office_products/Page_icon-app/button_Next'))
 WebUI.click(findTestObject('office_products/Page_icon-app/button_Create Product (1)'))
 
 if (WebUI.verifyTextPresent('Success', false, FailureHandling.OPTIONAL)) {
+	
     WebUI.closeBrowser()
+	
 } else {
+
     WebUI.takeScreenshot('errors/'+currentDateTime + '_create_office_product.png')
+
 }
 
