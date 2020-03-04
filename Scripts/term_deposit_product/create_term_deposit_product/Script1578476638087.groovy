@@ -34,7 +34,7 @@ int num = max - min
 
 randomNum = (max + (new Random().nextInt() % num))
 
-String xpath = ('(.//*[normalize-space(text()) and normalize-space(.)=\'Sa\'])[1]/following::div[' + todayPlusThree) + ']'
+String xpath = ('.//*/text()[normalize-space(.)=' + todaysDay) + ']/parent::*'
 
 TestObject daySelect = new TestObject('obj')
 
@@ -90,13 +90,13 @@ WebUI.click(findTestObject('Term_Deposit_Product/Page_icon-app/li_BOTH (1)'))
 
 WebUI.click(findTestObject('Object Repository/Term_Deposit_Product/Page_icon-app/div_Multiple Select'))
 
-WebUI.setText(findTestObject('Term_Deposit_Product/Page_icon-app/input_Description_ant-input'), 'TERM DEPOSIT')
+WebUI.setText(findTestObject('Term_Deposit_Product/Page_icon-app/input_Code  Description_ant-input'), 'TERM DEPOSIT')
 
-WebUI.click(findTestObject('Term_Deposit_Product/Page_icon-app/div_ (3)'))
+not_run: WebUI.click(findTestObject('Term_Deposit_Product/Page_icon-app/div_ (3)'))
 
-WebUI.click(findTestObject('Object Repository/Term_Deposit_Product/Page_icon-app/li_NGN - NIGERIAN NAIRA'))
+not_run: WebUI.click(findTestObject('Object Repository/Term_Deposit_Product/Page_icon-app/li_NGN - NIGERIAN NAIRA'))
 
-WebUI.click(findTestObject('Term_Deposit_Product/Page_icon-app/button_Search (1)'))
+WebUI.click(findTestObject('Term_Deposit_Product/Page_icon-app/button_Search (14)'))
 
 not_run: WebUI.delay(50)
 
@@ -340,8 +340,8 @@ WebUI.click(findTestObject('Object Repository/Term_Deposit_Product/Page_icon-app
 WebUI.click(findTestObject('Term_Deposit_Product/Page_icon-app/button_Yes (1)'))
 
 if (WebUI.verifyTextPresent('Success', false, FailureHandling.OPTIONAL)) {
-	WebUI.closeBrowser()
+    WebUI.closeBrowser()
 } else {
-	WebUI.takeScreenshot('errors/'+currentDateTime + '_create_term_deposit_product.png')
-
+    WebUI.takeScreenshot(('errors/' + currentDateTime) + '_create_term_deposit_product.png')
 }
+

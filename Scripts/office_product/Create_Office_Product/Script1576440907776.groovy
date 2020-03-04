@@ -37,7 +37,7 @@ int num = max - min
 randomNum = (max + (new Random().nextInt() % num))
 
 // Create a custom xpath for selecting todays date from date dropdown
-String xpath = ('(.//*[normalize-space(text()) and normalize-space(.)=\'Sa\'])[1]/following::div[' + todayPlusThree) + ']'
+String xpath = ('.//*/text()[normalize-space(.)=' + todaysDay) + ']/parent::*'
 
 TestObject daySelect = new TestObject('obj')
 
@@ -64,10 +64,6 @@ WebUI.click(findTestObject('office_products/Page_icon-app/input_Effective Dates_
 
 WebUI.click(daySelect)
 
-WebUI.click(findTestObject('office_products/Page_icon-app/div_ (1)'))
-
-WebUI.click(findTestObject('office_products/Page_icon-app/div_Multiple Select (1)'), FailureHandling.STOP_ON_FAILURE)
-
 WebUI.click(findTestObject('office_products/Page_icon-app/div_Multiple Select'))
 
 WebUI.setText(findTestObject('office_products/Page_icon-app/input_Description_ant-input'), 'OFFICE')
@@ -85,8 +81,7 @@ WebUI.click(findTestObject('office_products/Page_icon-app/input_Reset_ant-checkb
 
 WebUI.click(findTestObject('office_products/Page_icon-app/span_GL Look Up_ant-drawer-close-x'))
 
-WebUI.click(findTestObject(String currentDateTime = todayint max = 9999
-.format('dd-MM-yyyy-hh:mm-a')'office_products/Page_icon-app/div_ (2)'))
+WebUI.click(findTestObject('office_products/Page_icon-app/div_ (2)'))
 
 WebUI.click(findTestObject('office_products/Page_icon-app/li_BOTH - Both'))
 
@@ -141,12 +136,8 @@ WebUI.click(findTestObject('office_products/Page_icon-app/button_Next'))
 WebUI.click(findTestObject('office_products/Page_icon-app/button_Create Product (1)'))
 
 if (WebUI.verifyTextPresent('Success', false, FailureHandling.OPTIONAL)) {
-	
     WebUI.closeBrowser()
-	
 } else {
-
-    WebUI.takeScreenshot('errors/'+currentDateTime + '_create_office_product.png')
-
+    WebUI.takeScreenshot(('errors/' + currentDateTime) + '_create_office_product.png')
 }
 

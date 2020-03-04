@@ -20,9 +20,9 @@ WebUI.openBrowser('')
 
 WebUI.navigateToUrl(GlobalVariable.url)
 
-WebUI.setText(findTestObject('Object Repository/Login/Page_Icon Login/input_WELCOME BACK_username'), GlobalVariable.username)
+WebUI.setText(findTestObject('Login/Page_sso/input_WELCOME BACK_ant-input ant-input-lg'), GlobalVariable.username)
 
-WebUI.setEncryptedText(findTestObject('Object Repository/Login/Page_Icon Login/input_WELCOME BACK_password'), GlobalVariable.password)
+WebUI.setEncryptedText(findTestObject('Login/Page_sso/input_WELCOME BACK_ant-input ant-input-lg (1)'), GlobalVariable.password)
 
-WebUI.sendKeys(findTestObject('Object Repository/Login/Page_Icon Login/input_WELCOME BACK_password'), Keys.chord(Keys.ENTER))
+WebUI.click(findTestObject('Login/Page_sso/button_Login'), FailureHandling.STOP_ON_FAILURE)
 

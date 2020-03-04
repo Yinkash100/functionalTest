@@ -15,7 +15,7 @@ import com.kms.katalon.core.webui.keyword.WebUiBuiltInKeywords as WebUI
 import com.kms.katalon.core.windows.keyword.WindowsBuiltinKeywords as Windows
 import internal.GlobalVariable as GlobalVariable
 
-WebUI.click(findTestObject('others/Page_icon-app/div_Applications_item__icon'))
+WebUI.click(findTestObject('others/Page_sso/button_CORE_app__button'))
 
 WebUI.click(findTestObject('others/Page_icon-app/a_Build No_aside__toggler'))
 
