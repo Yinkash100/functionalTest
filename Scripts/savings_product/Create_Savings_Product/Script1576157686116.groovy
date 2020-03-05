@@ -273,15 +273,15 @@ WebUI.click(findTestObject('Savings_Product/Page_icon-app/button_Next'))
 
 WebUI.click(findTestObject('Savings_Product/Page_icon-app/svg (3)'))
 
-WebUI.click(findTestObject('Savings_Product/Page_icon-app/button_Search (2)'))
+WebUI.click(findTestObject('Savings_Product/Page_icon-app/button_Search (5)'))
 
 WebUI.click(findTestObject('Savings_Product/Page_icon-app/button_Select (2)'))
 
-WebUI.click(findTestObject('Savings_Product/Page_icon-app/svg (4)'))
+not_run: WebUI.click(findTestObject('Savings_Product/Page_icon-app/svg (4)'))
 
-WebUI.click(findTestObject('Savings_Product/Page_icon-app/button_Search (2)'))
+not_run: WebUI.click(findTestObject('Savings_Product/Page_icon-app/button_Search (6)'))
 
-WebUI.click(findTestObject('Savings_Product/Page_icon-app/button_Select (3)'))
+not_run: WebUI.click(findTestObject('Savings_Product/Page_icon-app/button_Select (3)'))
 
 WebUI.click(findTestObject('Savings_Product/Page_icon-app/button_CREATE SAVINGS PRODUCT (2)'))
 

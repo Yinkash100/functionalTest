@@ -66,20 +66,15 @@ WebUI.click(daySelect)
 
 WebUI.click(findTestObject('office_products/Page_icon-app/div_Multiple Select'))
 
-WebUI.setText(findTestObject('office_products/Page_icon-app/input_Description_ant-input'), 'OFFICE')
+WebUI.setText(findTestObject('office_products/Page_icon-app/input_Code  Description_ant-input'), 'OFFICE')
 
-WebUI.click(findTestObject('office_products/Page_icon-app/div_ (7)'))
+WebUI.click(findTestObject('office_products/Page_icon-app/button_Search (2)'))
 
-WebUI.click(findTestObject('office_products/Page_icon-app/li_NGN - NIGERIAN NAIRA (1)'))
+WebUI.click(findTestObject('office_products/Page_icon-app/label_DEP EXPENSE ON OFFICE EQUIPME_ant-checkbox-wrapper'))
 
-WebUI.click(findTestObject('office_products/Page_icon-app/button_Search'))
+WebUI.click(findTestObject('office_products/Page_icon-app/label_Operation_ant-checkbox-wrapper'))
 
-//As at when writing this test case, the GL-lookup search is extremely slow
-not_run: WebUI.delay(40)
-
-WebUI.click(findTestObject('office_products/Page_icon-app/input_Reset_ant-checkbox-input'))
-
-WebUI.click(findTestObject('office_products/Page_icon-app/span_GL Look Up_ant-drawer-close-x'))
+WebUI.click(findTestObject('office_products/Page_icon-app/button_Confirm Selected'))
 
 WebUI.click(findTestObject('office_products/Page_icon-app/div_ (2)'))
 
@@ -91,7 +86,15 @@ WebUI.click(findTestObject('office_products/Page_icon-app/li_NON_PARTITION - Non
 
 WebUI.click(findTestObject('office_products/Page_icon-app/div_ (4)'))
 
-WebUI.setText(findTestObject('office_products/Page_icon-app/input_Code_ant-input'), 'OFFICE')
+WebUI.setText(findTestObject('office_products/Page_icon-app/input_Description_ant-input (1)'), 'OFFICE')
+
+WebUI.click(findTestObject('office_products/Page_icon-app/button_Search (3)'))
+
+WebUI.click(findTestObject('office_products/Page_icon-app/label_Operation_ant-checkbox-wrapper (1)'))
+
+WebUI.click(findTestObject('office_products/Page_icon-app/label_PREPAID W I P CASH OFFICE -AKOKWA_ant-checkbox-wrapper'))
+
+WebUI.click(findTestObject('office_products/Page_icon-app/button_Confirm Selected (1)'))
 
 WebUI.click(findTestObject('office_products/Page_icon-app/button_Search (1)'))
 
