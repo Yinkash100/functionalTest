@@ -1,13 +1,13 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <WebElementEntity>
    <description></description>
-   <name>input_Product Name_ant-input</name>
+   <name>input_Description_ant-input</name>
    <tag></tag>
-   <elementGuidId>1ea096f5-8cca-43e0-8b8a-124a95b295ad</elementGuidId>
+   <elementGuidId>afbaf84b-f9e7-4193-a6db-9c3595524657</elementGuidId>
    <selectorCollection>
       <entry>
          <key>XPATH</key>
-         <value>(//input[@type='text'])[2]</value>
+         <value>(//input[@type='text'])[52]</value>
       </entry>
    </selectorCollection>
    <selectorMethod>XPATH</selectorMethod>
@@ -45,20 +45,20 @@
       <matchCondition>equals</matchCondition>
       <name>xpath</name>
       <type>Main</type>
-      <value>/html[1]/body[1]/div[6]/div[@class=&quot;ant-drawer ant-drawer-right ant-drawer-open fixedBottomDrawer&quot;]/div[@class=&quot;ant-drawer-content-wrapper&quot;]/div[@class=&quot;ant-drawer-content&quot;]/div[@class=&quot;ant-drawer-wrapper-body&quot;]/div[@class=&quot;ant-drawer-body&quot;]/div[1]/div[@class=&quot;ant-tabs ant-tabs-top ant-tabs-line&quot;]/div[@class=&quot;ant-tabs-content ant-tabs-content-animated ant-tabs-top-content&quot;]/div[@class=&quot;ant-tabs-tabpane ant-tabs-tabpane-active&quot;]/div[2]/div[@class=&quot;ant-row-flex&quot;]/div[@class=&quot;ant-col-16&quot;]/div[1]/div[@class=&quot;ant-row ant-form-item&quot;]/div[@class=&quot;ant-form-item-control-wrapper&quot;]/div[@class=&quot;ant-form-item-control&quot;]/span[@class=&quot;ant-form-item-children&quot;]/input[@class=&quot;ant-input&quot;]</value>
+      <value>/html[1]/body[1]/div[9]/div[@class=&quot;ant-drawer ant-drawer-right ant-drawer-open&quot;]/div[@class=&quot;ant-drawer-content-wrapper&quot;]/div[@class=&quot;ant-drawer-content&quot;]/div[@class=&quot;ant-drawer-wrapper-body&quot;]/div[@class=&quot;ant-drawer-body&quot;]/div[@class=&quot;container&quot;]/div[@class=&quot;ant-collapse&quot;]/div[@class=&quot;ant-collapse-item ant-collapse-item-active&quot;]/div[@class=&quot;ant-collapse-content ant-collapse-content-active&quot;]/div[@class=&quot;ant-collapse-content-box&quot;]/div[1]/form[1]/div[@class=&quot;ant-row-flex&quot;]/div[@class=&quot;ant-col-xs-24 ant-col-md-6 ant-col-lg-6&quot;]/div[1]/div[@class=&quot;ant-row ant-form-item ant-form-item-no-colon&quot;]/div[@class=&quot;ant-form-item-control-wrapper&quot;]/div[@class=&quot;ant-form-item-control has-success&quot;]/span[@class=&quot;ant-form-item-children&quot;]/input[@class=&quot;ant-input&quot;]</value>
    </webElementProperties>
    <webElementXpaths>
       <isSelected>true</isSelected>
       <matchCondition>equals</matchCondition>
       <name>xpath:attributes</name>
       <type>Main</type>
-      <value>(//input[@type='text'])[2]</value>
+      <value>(//input[@type='text'])[52]</value>
    </webElementXpaths>
    <webElementXpaths>
       <isSelected>false</isSelected>
       <matchCondition>equals</matchCondition>
       <name>xpath:position</name>
       <type>Main</type>
-      <value>//div[3]/div/div/div[2]/div/span/input</value>
+      <value>//form/div/div[2]/div/div/div[2]/div/span/input</value>
    </webElementXpaths>
 </WebElementEntity>

@@ -25,11 +25,17 @@ WebUI.callTestCase(findTestCase('others/open_products'), [:], FailureHandling.ST
 
 WebUI.click(findTestObject('Savings_Product/Page_icon-app/a_Savings'))
 
+WebUI.click(findTestObject('Savings_Product/Page_icon-app/button_Pending Verification_ant-btn ant-btn-primary'))
+
+WebUI.click(findTestObject('Savings_Product/Page_icon-app/input_Product Code_ant-input (1)'))
+
+WebUI.click(findTestObject('Savings_Product/Page_icon-app/button_Search (4)'))
+
 WebUI.click(findTestObject('Savings_Product/Page_icon-app/button_Active_table__btn ant-btn ant-btn-primary ant-dropdown-trigger'))
 
 WebUI.click(findTestObject('Savings_Product/Page_icon-app/a_Modify Product'))
 
-WebUI.click(findTestObject('Savings_Product/Page_icon-app/a_Interest Code Fetched Successfully_ant-notification-notice-close'))
+not_run: WebUI.click(findTestObject('Savings_Product/Page_icon-app/a_Interest Code Fetched Successfully_ant-notification-notice-close'))
 
 WebUI.click(findTestObject('Savings_Product/Page_icon-app/div_ (24)'))
 
@@ -64,9 +70,8 @@ WebUI.click(findTestObject('Savings_Product/Page_icon-app/button_MODIFY SAVINGS 
 WebUI.click(findTestObject('Savings_Product/Page_icon-app/button_Yes (3)'))
 
 if (WebUI.verifyTextPresent('Success', false, FailureHandling.OPTIONAL)) {
-	WebUI.closeBrowser()
+    WebUI.closeBrowser()
 } else {
-	WebUI.takeScreenshot('errors/'+currentDateTime + '_modify_savings_product.png')
+    WebUI.takeScreenshot(('errors/' + currentDateTime) + '_modify_savings_product.png')
 }
-
 

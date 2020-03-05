@@ -34,7 +34,7 @@ int num = max - min
 
 randomNum = (max + (new Random().nextInt() % num))
 
-String xpath = ('(.//*[normalize-space(text()) and normalize-space(.)=\'Sa\'])[1]/following::div[' + todayPlusThree) + ']'
+String xpath = ('(.//*[normalize-space(text()) and normalize-space(.)=\'Sa\'])[1]/following::div[' + todaysDay) + ']'
 
 TestObject daySelect = new TestObject('obj')
 
@@ -71,20 +71,21 @@ WebUI.click(findTestObject('Savings_Product/Page_icon-app/div_ (2)'))
 
 WebUI.click(findTestObject('Object Repository/Savings_Product/Page_icon-app/li_RETAIL - Retail customer'))
 
-not_run: WebUI.click(findTestObject('Object Repository/Savings_Product/Page_icon-app/div_Select'))
+WebUI.click(findTestObject('Savings_Product/Page_icon-app/div_Multiple Select'))
 
-not_run: WebUI.delay(5)
+WebUI.setText(findTestObject('Savings_Product/Page_icon-app/input_Code  Description_ant-input'), 'SAVING')
 
-not_run: WebUI.setText(findTestObject('Object Repository/Savings_Product/Page_icon-app/input_Select_ant-select-search__field'), 
-    'sav')
+WebUI.click(findTestObject('Savings_Product/Page_icon-app/button_Search (3)'))
 
-not_run: WebUI.click(findTestObject('Object Repository/Savings_Product/Page_icon-app/li_29290 - OGBONGE SAVINGS ACCOUNT'))
+WebUI.click(findTestObject('Savings_Product/Page_icon-app/label_SAVINGS ACCOUNT -CHEQUE_ant-checkbox-wrapper'))
 
-not_run: WebUI.click(findTestObject('Object Repository/Savings_Product/Page_icon-app/li_29100 - SAVINGS - CHILDREN'))
+WebUI.click(findTestObject('Savings_Product/Page_icon-app/label_POWER BASE (WOMAN) SAVINGS_ant-checkbox-wrapper'))
 
-WebUI.click(findTestObject('Object Repository/Savings_Product/Page_icon-app/button_Auto Generate Account Number_ant-switch'))
+WebUI.click(findTestObject('Savings_Product/Page_icon-app/button_Confirm Selected'))
 
-WebUI.click(findTestObject('Savings_Product/Page_icon-app/div_ (3)'))
+WebUI.click(findTestObject('Savings_Product/Page_icon-app/span_Auto Generate Account Number_ant-switch-inner'))
+
+WebUI.click(findTestObject('Savings_Product/Page_icon-app/div_ (28)'))
 
 WebUI.click(findTestObject('Object Repository/Savings_Product/Page_icon-app/li_TDGOV'))
 
@@ -99,7 +100,7 @@ WebUI.click(findTestObject('Object Repository/Savings_Product/Page_icon-app/butt
 
 WebUI.click(findTestObject('Savings_Product/Page_icon-app/div_ (6)'))
 
-WebUI.click(findTestObject('Object Repository/Savings_Product/Page_icon-app/li_NSC101'))
+WebUI.click(findTestObject('Savings_Product/Page_icon-app/li_NSC101'))
 
 WebUI.click(findTestObject('Savings_Product/Page_icon-app/div_ (4)'))
 
@@ -174,17 +175,19 @@ WebUI.click(findTestObject('Savings_Product/Page_icon-app/div_ (10)'))
 
 WebUI.click(findTestObject('Savings_Product/Page_icon-app/li_SIMPLE'))
 
-WebUI.click(findTestObject('Savings_Product/Page_icon-app/svg'))
+not_run: WebUI.click(findTestObject('Savings_Product/Page_icon-app/svg'))
 
-WebUI.click(findTestObject('Savings_Product/Page_icon-app/button_Search'))
+not_run: WebUI.setText(findTestObject('Savings_Product/Page_icon-app/input_Description_ant-input'), 'SAVING')
 
-WebUI.click(findTestObject('Savings_Product/Page_icon-app/button_Select'))
+not_run: WebUI.click(findTestObject('Savings_Product/Page_icon-app/button_Search'))
 
-WebUI.click(findTestObject('Savings_Product/Page_icon-app/svg (2)'))
+not_run: WebUI.click(findTestObject('Savings_Product/Page_icon-app/button_Select'))
 
-WebUI.click(findTestObject('Savings_Product/Page_icon-app/button_Search (1)'))
+not_run: WebUI.click(findTestObject('Savings_Product/Page_icon-app/svg (2)'))
 
-WebUI.click(findTestObject('Savings_Product/Page_icon-app/button_Select (1)'))
+not_run: WebUI.click(findTestObject('Savings_Product/Page_icon-app/button_Search (1)'))
+
+not_run: WebUI.click(findTestObject('Savings_Product/Page_icon-app/button_Select (1)'))
 
 WebUI.click(findTestObject('Savings_Product/Page_icon-app/div_ (12)'))
 
@@ -203,6 +206,36 @@ WebUI.click(findTestObject('Savings_Product/Page_icon-app/div_ (14)'))
 WebUI.click(findTestObject('Savings_Product/Page_icon-app/li_INTEREST_CALCULATION - Interest calculation'))
 
 WebUI.click(findTestObject('Savings_Product/Page_icon-app/button_Add TOD'))
+
+WebUI.click(findTestObject('Savings_Product/Page_icon-app/div_ (27)'))
+
+WebUI.click(findTestObject('Savings_Product/Page_icon-app/li_SAVINGS ACCOUNT OPENING'))
+
+WebUI.click(findTestObject('Savings_Product/Page_icon-app/div_ (26)'))
+
+WebUI.click(findTestObject('Savings_Product/Page_icon-app/li_SAVING ACCOUNT OPENING 2'))
+
+WebUI.click(findTestObject('Savings_Product/Page_icon-app/button_Add Fee Information'))
+
+WebUI.click(findTestObject('Savings_Product/Page_icon-app/div_ (27)'))
+
+WebUI.click(findTestObject('Savings_Product/Page_icon-app/li_SAVINGS ACCOUNT MAINTENANCE'))
+
+WebUI.click(findTestObject('Savings_Product/Page_icon-app/div_ (26)'))
+
+WebUI.click(findTestObject('Savings_Product/Page_icon-app/li_INACTIVE SAVINGS ACCOUNT CHARGE'))
+
+WebUI.click(findTestObject('Savings_Product/Page_icon-app/button_Add Fee Information'))
+
+WebUI.click(findTestObject('Savings_Product/Page_icon-app/div_ (27)'))
+
+WebUI.click(findTestObject('Savings_Product/Page_icon-app/li_SAVINGS ACCOUNT MAINTENANCE'))
+
+WebUI.click(findTestObject('Savings_Product/Page_icon-app/div_ (26)'))
+
+WebUI.click(findTestObject('Savings_Product/Page_icon-app/li_SAVINGS ACCOUNT REACTIVATION CHARGE'))
+
+WebUI.click(findTestObject('Savings_Product/Page_icon-app/button_Add Fee Information'))
 
 WebUI.click(findTestObject('Savings_Product/Page_icon-app/button_Next'))
 
@@ -238,22 +271,25 @@ WebUI.click(findTestObject('Savings_Product/Page_icon-app/button_Yes (1)'))
 
 WebUI.click(findTestObject('Savings_Product/Page_icon-app/button_Next'))
 
-WebUI.click(findTestObject('Savings_Product/Page_icon-app/div_ (17)'))
+WebUI.click(findTestObject('Savings_Product/Page_icon-app/svg (3)'))
 
-WebUI.click(findTestObject('Savings_Product/Page_icon-app/li_GF1 - ACCOUNT FROZEN'))
+WebUI.click(findTestObject('Savings_Product/Page_icon-app/button_Search (2)'))
 
-WebUI.click(findTestObject('Savings_Product/Page_icon-app/div_ (18)'))
+WebUI.click(findTestObject('Savings_Product/Page_icon-app/button_Select (2)'))
 
-WebUI.click(findTestObject('Savings_Product/Page_icon-app/li_IC3 - VALUE DATED NOTICE'))
+WebUI.click(findTestObject('Savings_Product/Page_icon-app/svg (4)'))
+
+WebUI.click(findTestObject('Savings_Product/Page_icon-app/button_Search (2)'))
+
+WebUI.click(findTestObject('Savings_Product/Page_icon-app/button_Select (3)'))
 
 WebUI.click(findTestObject('Savings_Product/Page_icon-app/button_CREATE SAVINGS PRODUCT (2)'))
 
 WebUI.click(findTestObject('Savings_Product/Page_icon-app/button_Yes (3)'))
 
 if (WebUI.verifyTextPresent('Success!', false, FailureHandling.OPTIONAL)) {
-	WebUI.closeBrowser()
+    WebUI.closeBrowser()
 } else {
-	WebUI.takeScreenshot('errors/'+currentDateTime + '_create_savings_product.png')
+    WebUI.takeScreenshot(('errors/' + currentDateTime) + '_create_savings_product.png')
 }
-
 
